@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/FTP/static/css/main.c96c554f.css",
+    "main.js": "/FTP/static/js/main.d2aa979d.js",
+    "static/media/fon2.jpg": "/FTP/static/media/fon2.e0c8399092c08b4f2f6d.jpg",
+    "index.html": "/FTP/index.html",
+    "main.c96c554f.css.map": "/FTP/static/css/main.c96c554f.css.map",
+    "main.d2aa979d.js.map": "/FTP/static/js/main.d2aa979d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c96c554f.css",
+    "static/js/main.d2aa979d.js"
+  ]
+}
