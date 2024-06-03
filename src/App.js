@@ -1,28 +1,35 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import About from './pages/About';
+import Feed from './pages/Feed';
+import FeedComplete from './pages/FeedComplete';
 import Footer from './components/Footer';
-import About from './components/About';
-import Home from './components/Home';
-import Services from './components/Services';
-import ServiceDetails from './components/ServiceDetails';
-import './App.css';
+import {BrowserRouter, Routes, Route } from "react-router-dom";
+import UslugiList from './pages/UslugiList';
+import UslugiDisplay from './pages/UslugiDisplay';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-        <Route path="/" exact element={<Home />} />
-          <Route path="/Home" exact element={<Home />} />
-          <Route path="/services" exact element={<Services />} />
-          <Route path="/about" element={<About />} />
+export default function App () {
+    return (
+      <>
+      <header>
+      </header>
+      
+      <BrowserRouter>
+      <Navbar/>
+      <div id="block2">
+      <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/uslugi" element={<UslugiList/>} />
+      <Route path="/about" element={<About/>} />
+      <Route path="/feed" element={<Feed/>} />
+      <Route path="/feedcomplete" element={<FeedComplete/>} />
+        <Route path="/uslugi/:id" element={<UslugiDisplay />} />
         </Routes>
-        <Footer />
-      </div>
-    </Router>
-  );
+        <div id="block0"></div>
+        <Footer/>
+        </div>
+    </BrowserRouter>
+    </>
+    )
 }
-
-export default App;
